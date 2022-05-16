@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="34bbb2b2-8f38-464f-b331-88ababc64bff" name="fit" url="auction.std-1926.ist.mospolytech.ru">
+        <fileTransfer rootFolder="/home/std/auction" accessType="SFTP" host="std-1926.ist.mospolytech.ru" port="22" sshConfigId="a67b9fe7-ff79-469c-a8f8-9ec342f360a5" sshConfig="std@std-1926.ist.mospolytech.ru:22 password">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" keepAliveTimeout="0" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
