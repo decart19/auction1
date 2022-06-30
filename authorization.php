@@ -6,13 +6,12 @@
 
 ?>
 
-<div id="particles" class="particles"></div>
 
 
-<div class="container min-vh-100 " style="padding-top: 55px;">
 
 
-    <div class="content justify-content-center row vh-50 bg-white mx-md-5 py-5 border border-secondary" style="border-radius: 10px">
+
+    <div class="content1" >
 
 
 
@@ -20,56 +19,35 @@
 
 
 
-            <label>Логин:</label><br>
-            <input name="login" type="text" size="15" maxlength="15" class="form-control" style="width: 300px;" value="<?=$_COOKIE['login']?>">
+            <label id="lb">Логин:</label><br>
+            <input name="login" type="text" size="15" maxlength="15" class="pole"  value="<?=$_COOKIE['login']?>">
 
             <br>
 
-            <label>Пароль:</label><br>
-            <input name="password" type="password" size="15" maxlength="15" class="form-control" style="width: 300px;" value="<?=$_COOKIE['password']?>">
+            <label id="lb" >Пароль:</label><br>
+            <input name="password" type="password" size="15" maxlength="15" class="pole" value="<?=$_COOKIE['password']?>">
             <br>
 
 
-            <input type="submit" name="submit" class="btn btn-success" style="width: 300px;background-color: #3f51b5;" value="Войти" OnClick="Get();">
+            <input type="submit" id="submit6" name="submit"   value="Войти" OnClick="Get();">
 
             <br><br>
 
-            <div class="text-center" style="font-size: 15px">
+            <div class="text-center" >
                 <b>
-                    <a href="reg.php" class="pb-1">Зарегистрироваться</a><br>
-                    <a href="send_pass.php">Забыли пароль?</a>
+                    <a href="../registrat.php" class="pb-1" >Зарегистрироваться</a><br>
+                  <?php
+                  /*  <a href="send_pass.php" class="pb-1" >Забыли пароль?</a> */
+               ?>
                 </b>
             </div>
 
         </form>
 
-    </div></div>
+    </div>
 
 <?php
-    if( $_POST['submit'] == true ) {
 
-    $login = $_POST['login'];
-    $password = $_POST['password'];
-
-
-    $statys = $db->query("SELECT `Login`, `Password` FROM `users`");
-    while ($rows = mysqli_fetch_assoc($statys)) {
-
-
-        $i = $rows['Login'];
-        $j = $rows['Password'];
-        $type = $rows['type'];
-
-
-        if ($i == $login && $j == $password) {
-
-           require('aytoris.php');
-
-        }
-
-
-    }
-}
 
         require_once "blok/footer.php";
     ?>

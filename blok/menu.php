@@ -1,14 +1,31 @@
 
-    <div>
-
-        <a href="../authorization.php" >Мой кабинет</a>
-        <a href="#" >Справка</a>
+    <div class="menu">
 
 
-        <select>
-            <option> <?php echo $_COOKIE["Login"]; ?> </option>
-            <option><a href="#" >Личная страница</a></option>
-            <option><a href="#" >Выход</a></option>
-        </select>
+
+        <a class="a_menu"  href="../index.php" >Главная</a>
+
+        <a class="a_menu" href="#" >Справка</a>
+
+
+
+        <a class="a_menu" href="../office.php" >Мой кабинет</a>
+
+
+        <?php
+
+            if($_COOKIE["Login"] == true)
+            {
+            echo ' 
+                      
+                       <a class="a_menu" href="../exit.php" >Выход</a>
+                        <a class="a_menu" href="../office.php" >' .$_COOKIE["Login"].'</a>
+                  ';
+
+            }else
+            {
+                echo '<a class="a_menu" href="../authorization.php" >Авторизация</a>';
+            }
+        ?>
 
     </div>

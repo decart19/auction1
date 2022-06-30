@@ -1,0 +1,31 @@
+
+<div id="drop-files" ondragover="return false">
+    <p>Перетащите изображение сюда</p>
+    <form id="frm" style="width: 300px;background-color: #3f51b5;">
+        <input type="file"   id="uploadbtn" multiple />
+    </form>
+</div>
+
+<div class="content">
+
+
+    <!-- Область предпросмотра -->
+    <div id="uploaded-holder">
+        <div id="dropped-files">
+
+        </div>
+    </div>
+
+    <!-- Кнопки загрузить и удалить, а также количество файлов -->
+    <div id="upload-button">
+        <center>
+            <span>0 Файлов</span>
+
+            <input type="submit" name="submit6" class="upload" style="width: 20%;background-color: #3f51b5;" value="Выставить" OnClick="Get();">
+
+            <a href="#" class="delete">Удалить</a>
+
+        </center>
+    </div>
+</div>
+
